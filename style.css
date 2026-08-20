@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #15120e;
+    color: #f3ead7;
+    font-family: Georgia, "Times New Roman", serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+
+body::before {
+    content: "THE LIBRARY OF THE RING";
+
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 6px;
+
+    color: #d6b35a;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    text-shadow: 0 0 15px rgba(214, 179, 90, 0.25);
+}
+
+
+
+#bookForm {
+    width: 380px;
+
+    padding: 30px 35px;
+
+    margin-bottom: 30px;
+
+    background: #211c15;
+
+    border: 1px solid #80672f;
+    border-radius: 8px;
+
+    box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.5),
+            inset 0 0 30px rgba(214, 179, 90, 0.03);
+
+    position: relative;
+}
+
+
+
+#bookForm::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    border: 1px solid rgba(214, 179, 90, 0.2);
+
+    border-radius: 5px;
+
+    pointer-events: none;
+}
+
+
+
+#bookForm h2 {
+    color: #d6b35a;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 0 10px rgba(214, 179, 90, 0.15);
+}
+
+
+
+#bookForm label {
+    display: block;
+
+    color: #c8bda9;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+
+#bookForm input {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #15120e;
+
+    color: #f3ead7;
+
+    border: 1px solid #66552d;
+    border-radius: 4px;
+
+    outline: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+#bookForm input::placeholder {
+    color: #756b5b;
+}
+
+#bookForm input:focus {
+    border-color: #d6b35a;
+
+    box-shadow:
+            0 0 12px rgba(214, 179, 90, 0.15);
+}
+
+
+
+#bookForm button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 12px;
+
+    background: #d6b35a;
+
+    color: #15120e;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#bookForm button:hover {
+    background: #f0d27c;
+
+    box-shadow:
+            0 0 20px rgba(214, 179, 90, 0.3);
+
+    transform: translateY(-2px);
+}
+
+
+
+#add,
+#display {
+    background: transparent;
+
+    color: #d6b35a;
+
+    border: 1px solid #8f7435;
+    border-radius: 5px;
+
+    padding: 12px 25px;
+
+    margin: 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#add:hover,
+#display:hover {
+    background: #d6b35a;
+
+    color: #15120e;
+
+    box-shadow:
+            0 0 20px rgba(214, 179, 90, 0.25);
+}
+
+
+
+#card {
+    width: 380px;
+
+    min-height: 430px;
+
+    margin-top: 55px;
+
+    padding: 35px;
+
+    background: #211c15;
+
+    border: 1px solid #80672f;
+    border-radius: 8px;
+
+    box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.5),
+            inset 0 0 30px rgba(214, 179, 90, 0.03);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+}
+
+/* Inner card border */
+
+#card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    border: 1px solid rgba(214, 179, 90, 0.2);
+
+    border-radius: 5px;
+
+    pointer-events: none;
+}
+
+
+
+#cardContent {
+    text-align: center;
+
+    padding: 35px 15px;
+}
+
+#cardTitle {
+    color: #d6b35a;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+            0 0 10px rgba(214, 179, 90, 0.15);
+}
+
+#author {
+    color: #c8bda9;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    margin-bottom: 35px;
+}
+
+
+
+#id,
+#bookId {
+    background: #15120e;
+
+    color: #bca15b;
+
+    border: 1px solid #66552d;
+
+    border-radius: 4px;
+
+    padding: 8px 16px;
+
+    font-family: monospace;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#id:hover,
+#bookId:hover {
+    border-color: #d6b35a;
+
+    color: #d6b35a;
+}
+
+
+#next {
+    align-self: center;
+
+    background: #d6b35a;
+
+    color: #15120e;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 12px 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+#next:hover {
+    background: #f0d27c;
+
+    box-shadow:
+            0 0 20px rgba(214, 179, 90, 0.3);
+
+    transform: translateY(-2px);
+}
+
