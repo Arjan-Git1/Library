@@ -1,11 +1,15 @@
 const library = [];
+
 document.getElementById('bookForm').style.display = 'none';
-function Book(name, author,id){
+function Book(name, author,id,read){
     this.name = name;
     this.author = author;
     this.id = id;
 
+
 }
+let sample = new Book("Name of the Book","Author","Id(Random Generated)");
+library.push(sample);
 var addu =0;
 function add(name, author, id){
     if(addu==0){
@@ -47,10 +51,18 @@ function display(i){
                display(i + 1);
            }
     }
+    document.getElementById("Remove").onclick = function(){
+            remove(i)
+    }
+    function remove(i){
+            library.splice(i,1);
+            display(0);
+    }
 
 }
 document.getElementById("add").addEventListener("click", add);
 document.getElementById("display").addEventListener("click", function (){
     display(0)
 });
+
 
